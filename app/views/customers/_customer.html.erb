@@ -1,11 +1,11 @@
-<div class="box">
+<div class="customer-card">
   <div class="media">
     <% if customer.image.attached? %>
-      <figure class="media-left">
-        <p class="image is-128x128">
-          <%= image_tag customer.image, alt: "#{customer.full_name}'s Image" %> <!--if img is attatched to customer use image_tag to display with alt customer fname -->
-        </p>
-      </figure>
+      <div class="media-left">
+        <div class="image-wrapper">
+          <%= image_tag customer.image, alt: "#{customer.full_name}'s Image", class: 'customer-image' %> <!--if img is attatched to customer use image_tag to display with alt customer fname -->
+        </div>
+      </div>
     <% end %>
 
     <div class="media-content">

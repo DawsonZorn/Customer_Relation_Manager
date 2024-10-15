@@ -1,0 +1,28 @@
+.customers-grid {
+  display: flex;
+  /* Enable flexbox layout */
+  flex-wrap: wrap;
+  /* Allow wrapping of items to a new line */
+  justify-content: space-between;
+  /* Ensure space between the cards */
+  gap: 20px;
+  /* Space between cards */
+}
+
+.customer-card {
+  background-color: #fff !important;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(25% - 20px);
+  /* Each card takes up 25% of the row minus the gap */
+  box-sizing: border-box;
+  /* Ensure padding/border doesn't affect width */
+  padding: 20px;
+}
+
+.customer-image {
+  max-width: 100%;
+  /* Ensure images fit within the container */
+  border-radius: 8px;
+}

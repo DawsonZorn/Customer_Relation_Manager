@@ -1,2 +1,13 @@
-<h1>Customer List</h1>
-<%= render @customers %>
+<div class="container p-6">
+  <h1 class="mb-4 has-text-black is-size-1">All Customers</h1>
+  <div class="customers-grid">
+    <% @customers.each do |customer| %>
+      <%= render partial: 'customer', locals: { customer: customer } %>
+    <% end %>
+  </div>
+  <div class="pagination-buttons">
+    <%= link_to 'View All Customers', customers_path, class: 'button is-link' %>
+    <%= link_to 'View Missing Email Customers', customers_missing_email_path, class: 'button is-link' %>
+    <%= link_to 'View Alphabetized Customers', customers_alphabetized_path, class: 'button is-link' %>
+  </div>
+</div>
